@@ -1,7 +1,200 @@
 ﻿@page "/"
+<div class="animated-background"></div>
+
+<style>
+    h2 {
+        color: #ccd6f6;
+        font-family: Calibri;
+        font-weight: bold;
+        font-size: 100px;
+        text-align: left;
+        letter-spacing: 2px;
+        margin-bottom: -10px;
+    }
+
+    h1 {
+        color: #64ffda;
+        font-family: 'JetBrains Mono';
+        font-size: 25px;
+        text-align: left;
+    }
+
+    h3 {
+        color: #8892b0;
+        font-family: Calibri;
+        font-weight: bold;
+        font-size: 100px;
+        text-align: left;
+        letter-spacing: 2px;
+    }
+
+    h4 {
+        color: #8892b0;
+        font-family: Calibri;
+        font-size: 20px;
+        text-align: left;
+    }
+
+    h5 {
+
+    }
+
+    .content {
+        margin-top: 100px;
+        margin-left: 100px;
+    }
+
+    .linkedin-button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .github-button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .resume-button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .linkedin-icon {
+        width: 50px;
+        height: 50px;
+        fill: #64ffda;
+        transition: fill 0.3s;
+    }
+
+    .github-icon {
+        width: 48px;
+        height: 48px;
+        fill: #64ffda;
+        transition: fill 0.3s;
+    }
+
+    .resume-icon {
+        width: 48px;
+        height: 48px;
+        fill: #64ffda;
+        transition: fill 0.3s;
+    }
+
+    .github-icon:hover {
+        fill: #fff;
+    }
+
+    .resume-icon:hover {
+        fill: #fff;
+    }
+
+    .linkedin-icon:hover {
+        fill: #fff;
+    }
+
+    @@keyframes fadeInFromRight {
+        0% {
+            transform: translateX(2%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    .fade-in-right {
+        animation: fadeInFromRight 1s ease-in-out forwards;
+        opacity: 0;
+    }
+
+    @@keyframes fadeInFromLeft {
+        0% {
+            transform: translateX(-2%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    .fade-in-left {
+        animation: fadeInFromLeft 1s ease-in-out forwards;
+        opacity: 0;
+    }
+
+    @@keyframes fadeInFromTop {
+        0% {
+            transform: translateY(-30%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .fade-in-top {
+        animation: fadeInFromTop 1s ease-in-out forwards;
+        opacity: 0;
+    }
+
+    @@keyframes fadeInFromBottom {
+        0% {
+            transform: translateY(0);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .fade-in-bottom {
+        animation: fadeInFromBottom 1s ease-in-out forwards;
+        opacity: 0;
+    }
+
+    .content {
+        position: relative;
+        z-index: 1; /* Ensure this is above the animated background */
+    }
+}
+</style>
 
 <PageTitle>Home</PageTitle>
 
-<h1>Hello, world!</h1>
+<div class="content">
+    <h1 class="fade-in-right" style="animation-delay: 0s;">Hi, my name is</h1>
+    <h2 class="fade-in-left" style="animation-delay: 0.25s;">Jack Cai.</h2>
+    <h3 class="fade-in-right" style="animation-delay: 0.5s;">Software Developer.</h3>
+    <h4 class="fade-in-top" style="animation-delay: 0.75s;">
+        I'm a passionate software developer known for my rapid learning<br>
+        and adaptable coding skills. I thrive on tackling new challenges<br>
+        and leveraging emerging technologies to create innovative solutions.
+    </h4>
+    <h5 class="fade-in-bottom" style="animation-delay: 1s;">
+        <br>
+        <button class="linkedin-button" aria-label="Button">
+            <svg class="linkedin-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6s9.6-4.298 9.6-9.6S15.302.4 10 .4M7.65 13.979H5.706V7.723H7.65zm-.984-7.024c-.614 0-1.011-.435-1.011-.973c0-.549.409-.971 1.036-.971s1.011.422 1.023.971c0 .538-.396.973-1.048.973m8.084 7.024h-1.944v-3.467c0-.807-.282-1.355-.985-1.355c-.537 0-.856.371-.997.728c-.052.127-.065.307-.065.486v3.607H8.814v-4.26c0-.781-.025-1.434-.051-1.996h1.689l.089.869h.039c.256-.408.883-1.01 1.932-1.01c1.279 0 2.238.857 2.238 2.699z" />
+            </svg>
+        </button>
 
-Welcome to your new app.
+        <button class="github-button" aria-label="Button">
+            <svg class="github-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 10.25c0 2.234-.636 4.243-1.908 6.027c-1.271 1.784-2.914 3.018-4.928 3.703c-.234.045-.406.014-.514-.093a.539.539 0 0 1-.163-.4V16.67c0-.863-.226-1.495-.677-1.895a8.72 8.72 0 0 0 1.335-.24c.394-.107.802-.28 1.223-.52a3.66 3.66 0 0 0 1.055-.888c.282-.352.512-.819.69-1.402c.178-.583.267-1.252.267-2.008c0-1.077-.343-1.994-1.028-2.75c.32-.81.286-1.717-.105-2.723c-.243-.08-.594-.03-1.054.147a6.94 6.94 0 0 0-1.198.587l-.495.32a9.03 9.03 0 0 0-2.5-.346a9.03 9.03 0 0 0-2.5.347a11.52 11.52 0 0 0-.553-.36c-.23-.143-.593-.314-1.088-.514c-.494-.2-.868-.26-1.12-.18c-.381 1.005-.412 1.912-.09 2.722c-.686.756-1.03 1.673-1.03 2.75c0 .756.09 1.423.268 2.002c.178.578.406 1.045.683 1.401a3.53 3.53 0 0 0 1.048.894c.421.24.83.414 1.224.52c.395.108.84.188 1.335.241c-.347.32-.56.779-.638 1.375a2.539 2.539 0 0 1-.586.2a3.597 3.597 0 0 1-.742.067c-.287 0-.57-.096-.853-.287c-.282-.192-.523-.47-.723-.834a2.133 2.133 0 0 0-.631-.694c-.256-.178-.471-.285-.645-.32l-.26-.04c-.182 0-.308.02-.378.06c-.07.04-.09.09-.065.153a.738.738 0 0 0 .117.187a.961.961 0 0 0 .17.16l.09.066c.192.09.38.259.567.508c.187.249.324.476.41.68l.13.307c.113.338.304.612.574.821c.269.21.56.343.872.4c.312.058.614.09.905.094c.29.004.532-.011.723-.047l.299-.053c0 .338.002.734.007 1.188l.006.72c0 .16-.056.294-.17.4c-.112.108-.286.139-.52.094c-2.014-.685-3.657-1.92-4.928-3.703C.636 14.493 0 12.484 0 10.25c0-1.86.447-3.574 1.341-5.145a10.083 10.083 0 0 1 3.64-3.73A9.6 9.6 0 0 1 10 0a9.6 9.6 0 0 1 5.02 1.375a10.083 10.083 0 0 1 3.639 3.73C19.553 6.675 20 8.391 20 10.25" />
+            </svg>
+        </button>
+
+        <button class="resume-button" aria-label="Button">
+            <svg class="resume-icon" viewBox="0 0 1400 1400" xmlns="http://www.w3.org/2000/svg">
+                <path d="M600 0C268.635 0 0 268.635 0 600s268.635 600 600 600s600-268.635 600-600S931.365 0 600 0M263.688 263.688h672.626V382.75h-73.219v65.5h73.219v119h-73.219v65.5h73.219v119h-73.219v65.5h73.219v119.094H263.688zm299.687 117.468c-53.692 0-97.188 43.558-97.188 97.25c0 38.051 21.842 70.971 53.688 86.938l-124.438 74.5h-1.531v105.094h338.938V639.844h-1.531l-124.438-74.5c31.846-15.967 53.688-48.887 53.688-86.938c-.001-53.692-43.496-97.25-97.188-97.25" />
+            </svg>
+        </button>
+    </h5>
+</div>

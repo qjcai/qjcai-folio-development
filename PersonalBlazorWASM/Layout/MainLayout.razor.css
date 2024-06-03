@@ -9,17 +9,18 @@ main {
 }
 
 .sidebar {
-    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+    background-image: linear-gradient(#112240, #112240);
+    /*background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);*/
 }
 
-.top-row {
+/*.top-row {
     background-color: #f7f7f7;
     border-bottom: 1px solid #d6d5d5;
     justify-content: flex-end;
     height: 3.5rem;
     display: flex;
     align-items: center;
-}
+}*/
 
     .top-row ::deep a, .top-row ::deep .btn-link {
         white-space: nowrap;
@@ -74,4 +75,30 @@ main {
         padding-left: 2rem !important;
         padding-right: 1.5rem !important;
     }
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.animated-background {
+    animation: gradientAnimation 10s ease infinite;
+    background: linear-gradient(270deg, #0a192f, #0f203c); /*#ff7e5f, #feb47b, #86a8e7, #91eac9*/
+    background-size: 800% 800%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
